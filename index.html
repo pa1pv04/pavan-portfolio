@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pavan Kumar | Futuristic Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pavan Kumar | AI Engineer & Video Editor</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
 
@@ -15,40 +16,36 @@
       padding:0;
       box-sizing:border-box;
       scroll-behavior:smooth;
-      font-family:'Poppins',sans-serif;
+      font-family:'Inter',sans-serif;
     }
 
     body{
-      background:#050816;
-      color:white;
+      background:#0b1120;
+      color:#e2e8f0;
       overflow-x:hidden;
     }
 
-    /* BACKGROUND GLOW */
+    /* MODERN AI BACKGROUND */
 
-    body::before{
-      content:'';
+    .bg-blur1{
       position:fixed;
-      width:500px;
-      height:500px;
-      background:#00f0ff;
-      filter:blur(180px);
-      opacity:0.2;
-      top:-150px;
-      left:-100px;
+      width:400px;
+      height:400px;
+      background:#2563eb25;
+      filter:blur(120px);
+      top:-100px;
+      right:-100px;
       z-index:-1;
     }
 
-    body::after{
-      content:'';
+    .bg-blur2{
       position:fixed;
-      width:500px;
-      height:500px;
-      background:#ff00ff;
-      filter:blur(180px);
-      opacity:0.15;
-      bottom:-150px;
-      right:-100px;
+      width:350px;
+      height:350px;
+      background:#06b6d425;
+      filter:blur(120px);
+      bottom:-100px;
+      left:-100px;
       z-index:-1;
     }
 
@@ -56,19 +53,20 @@
       width:100%;
       position:fixed;
       top:0;
-      padding:20px 10%;
+      z-index:1000;
+      padding:22px 10%;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      backdrop-filter:blur(12px);
-      background:rgba(0,0,0,0.2);
-      z-index:1000;
+      background:rgba(10,15,30,0.7);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,255,255,0.05);
     }
 
     nav h1{
-      color:#00f0ff;
-      font-size:28px;
-      text-shadow:0 0 15px #00f0ff;
+      font-size:24px;
+      font-weight:700;
+      color:white;
     }
 
     nav ul{
@@ -78,14 +76,14 @@
     }
 
     nav ul li a{
-      color:white;
       text-decoration:none;
+      color:#cbd5e1;
       transition:0.3s;
+      font-size:15px;
     }
 
     nav ul li a:hover{
-      color:#00f0ff;
-      text-shadow:0 0 10px #00f0ff;
+      color:#38bdf8;
     }
 
     /* HERO */
@@ -93,119 +91,161 @@
     .hero{
       min-height:100vh;
       display:flex;
-      justify-content:center;
       align-items:center;
-      text-align:center;
-      padding:120px 10%;
+      justify-content:center;
+      padding:140px 10% 100px;
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .tag{
+      display:inline-block;
+      padding:10px 18px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:40px;
+      margin-bottom:25px;
+      font-size:14px;
+      color:#38bdf8;
     }
 
     .hero h2{
-      font-size:70px;
+      font-size:62px;
+      line-height:1.1;
       margin-bottom:20px;
-    }
-
-    .hero h2 span{
-      color:#00f0ff;
-      text-shadow:
-      0 0 10px #00f0ff,
-      0 0 20px #00f0ff,
-      0 0 40px #00f0ff;
+      font-weight:800;
+      color:white;
     }
 
     .typing{
+      color:#38bdf8;
       font-size:28px;
-      color:#ff00ff;
-      margin-bottom:30px;
+      margin-bottom:25px;
       min-height:40px;
-      text-shadow:0 0 10px #ff00ff;
+      font-weight:600;
     }
 
     .hero p{
-      max-width:800px;
-      margin:auto;
+      color:#94a3b8;
       line-height:1.8;
-      color:#d9d9d9;
-      font-size:18px;
+      font-size:17px;
+      margin-bottom:35px;
     }
 
     .btns{
-      margin-top:40px;
       display:flex;
-      justify-content:center;
-      gap:20px;
+      gap:18px;
       flex-wrap:wrap;
     }
 
     .btn{
-      padding:15px 35px;
-      border-radius:40px;
-      border:none;
-      background:#00f0ff;
-      color:black;
-      font-weight:600;
+      padding:15px 28px;
+      border-radius:14px;
       text-decoration:none;
-      transition:0.4s;
-      box-shadow:0 0 20px #00f0ff;
+      font-weight:600;
+      transition:0.3s;
     }
 
-    .btn:hover{
-      transform:translateY(-5px);
-      box-shadow:
-      0 0 20px #00f0ff,
-      0 0 40px #00f0ff;
+    .btn-primary{
+      background:#2563eb;
+      color:white;
     }
 
-    /* GLASS CARDS */
+    .btn-primary:hover{
+      background:#1d4ed8;
+      transform:translateY(-3px);
+    }
 
-    .glass{
-      background:rgba(255,255,255,0.05);
+    .btn-secondary{
       border:1px solid rgba(255,255,255,0.1);
-      backdrop-filter:blur(12px);
-      border-radius:20px;
-      transition:0.4s;
+      color:white;
+      background:rgba(255,255,255,0.04);
     }
 
-    .glass:hover{
-      border:1px solid #00f0ff;
-      box-shadow:0 0 25px #00f0ff40;
-      transform:translateY(-10px);
+    .btn-secondary:hover{
+      background:rgba(255,255,255,0.08);
+    }
+
+    .hero-card{
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:28px;
+      padding:40px;
+      backdrop-filter:blur(18px);
+    }
+
+    .hero-card h3{
+      margin-bottom:25px;
+      font-size:24px;
+      color:white;
+    }
+
+    .hero-card p{
+      margin-bottom:18px;
+      color:#cbd5e1;
     }
 
     section{
       padding:100px 10%;
     }
 
-    .title{
-      text-align:center;
-      font-size:45px;
+    .section-title{
+      font-size:42px;
       margin-bottom:60px;
-      color:#00f0ff;
-      text-shadow:0 0 15px #00f0ff;
+      text-align:center;
+      color:white;
+      font-weight:700;
     }
 
-    /* SKILLS */
+    /* CARDS */
 
-    .skills{
+    .grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
       gap:30px;
     }
 
     .card{
-      padding:30px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      padding:32px;
+      border-radius:24px;
+      transition:0.3s;
+      backdrop-filter:blur(14px);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:#2563eb;
     }
 
     .card h3{
-      margin-bottom:15px;
-      color:#00f0ff;
+      margin-bottom:18px;
+      color:white;
+      font-size:22px;
+    }
+
+    .card p{
+      color:#94a3b8;
+      line-height:1.7;
     }
 
     /* PROJECTS */
 
-    .projects{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:30px;
+    .project-card{
+      min-height:260px;
+    }
+
+    .project-card span{
+      color:#38bdf8;
+      font-size:14px;
+      display:block;
+      margin-bottom:12px;
     }
 
     /* CONTACT */
@@ -215,23 +255,28 @@
     }
 
     .contact p{
-      margin:15px 0;
-      color:#d0d0d0;
+      margin:18px 0;
+      color:#cbd5e1;
+      font-size:17px;
     }
 
     footer{
-      text-align:center;
       padding:30px;
-      border-top:1px solid rgba(255,255,255,0.1);
-      color:#999;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,0.06);
+      color:#64748b;
     }
 
     /* MOBILE */
 
-    @media(max-width:768px){
+    @media(max-width:900px){
+
+      .hero-content{
+        grid-template-columns:1fr;
+      }
 
       .hero h2{
-        font-size:45px;
+        font-size:42px;
       }
 
       .typing{
@@ -249,6 +294,10 @@
       nav{
         padding:20px 5%;
       }
+
+      .hero{
+        padding:130px 5% 80px;
+      }
     }
 
   </style>
@@ -256,11 +305,14 @@
 
 <body>
 
+  <div class="bg-blur1"></div>
+  <div class="bg-blur2"></div>
+
   <!-- NAVBAR -->
 
   <nav>
 
-    <h1>PAVAN</h1>
+    <h1>Pavan Kumar</h1>
 
     <ul>
       <li><a href="#about">About</a></li>
@@ -275,26 +327,56 @@
 
   <section class="hero" id="about">
 
-    <div>
+    <div class="hero-content">
 
-      <h2>
-        Hi, I'm <span>Pavan Kumar</span>
-      </h2>
+      <div>
 
-      <div class="typing" id="typing"></div>
+        <div class="tag">
+          AI Engineer • Video Editor • Creative Technologist
+        </div>
 
-      <p>
-        Electrical and Electronics Engineering student at NIT Andhra Pradesh
-        passionate about Artificial Intelligence, Deep Learning,
-        Robotics, NLP and Futuristic Video Editing.
-        I create intelligent systems and cinematic digital experiences
-        with creativity and technology.
-      </p>
+        <h2>
+          Building AI Systems &
+          Cinematic Digital Experiences
+        </h2>
 
-      <div class="btns">
+        <div class="typing" id="typing"></div>
 
-        <a href="#" class="btn">Resume</a>
-        <a href="#" class="btn">Contact</a>
+        <p>
+          I am Balla Pavan Kumar, an Electrical and Electronics Engineering
+          student at NIT Andhra Pradesh passionate about Artificial Intelligence,
+          Machine Learning, Deep Learning, NLP, Robotics, and Professional Video Editing.
+          I combine creativity and technology to build intelligent solutions
+          and modern visual content.
+        </p>
+
+        <div class="btns">
+
+          <a href="#" class="btn btn-primary">
+            Download Resume
+          </a>
+
+          <a href="#contact" class="btn btn-secondary">
+            Contact Me
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-card">
+
+        <h3>Quick Overview</h3>
+
+        <p><strong>Education:</strong> NIT Andhra Pradesh</p>
+
+        <p><strong>Branch:</strong> Electrical & Electronics Engineering</p>
+
+        <p><strong>Core Skills:</strong> AI, ML, Deep Learning, NLP</p>
+
+        <p><strong>Creative Skills:</strong> Video Editing, Content Creation</p>
+
+        <p><strong>Tools:</strong> Python, Premiere Pro, DaVinci Resolve, GitHub</p>
 
       </div>
 
@@ -306,48 +388,54 @@
 
   <section id="skills">
 
-    <h2 class="title">Skills</h2>
+    <h2 class="section-title">Technical Skills</h2>
 
-    <div class="skills">
+    <div class="grid">
 
-      <div class="card glass">
-        <h3>AI & ML</h3>
+      <div class="card">
+
+        <h3>Artificial Intelligence</h3>
 
         <p>
-          Machine Learning, Deep Learning,
-          Neural Networks, NLP and AI systems.
+          Machine Learning, Deep Learning, NLP,
+          RAG Chatbots, Neural Networks,
+          Sentence Transformers and AI systems.
         </p>
+
       </div>
 
-      <div class="card glass">
+      <div class="card">
 
         <h3>Programming</h3>
 
         <p>
-          Python, C++, HTML, CSS,
-          JavaScript and problem solving.
+          Python, C++, HTML, CSS, SQL,
+          Flask and Scikit-Learn with strong
+          problem-solving skills.
         </p>
 
       </div>
 
-      <div class="card glass">
+      <div class="card">
 
         <h3>Video Editing</h3>
 
         <p>
-          Cinematic edits, reels,
-          transitions, VFX and storytelling.
+          Professional cinematic editing,
+          reels, transitions, storytelling,
+          content creation and modern editing workflows.
         </p>
 
       </div>
 
-      <div class="card glass">
+      <div class="card">
 
-        <h3>Tools</h3>
+        <h3>Tools & Platforms</h3>
 
         <p>
-          Premiere Pro, CapCut,
-          DaVinci Resolve, GitHub and VS Code.
+          Adobe Premiere Pro, CapCut,
+          DaVinci Resolve, VS Code,
+          GitHub and Microsoft Clipchamp.
         </p>
 
       </div>
@@ -360,39 +448,93 @@
 
   <section id="projects">
 
-    <h2 class="title">Projects</h2>
+    <h2 class="section-title">Featured Projects</h2>
 
-    <div class="projects">
+    <div class="grid">
 
-      <div class="card glass">
+      <div class="card project-card">
 
-        <h3>Battery SOH Prediction</h3>
+        <span>Artificial Intelligence</span>
+
+        <h3>Mini RAG Chatbot</h3>
 
         <p>
-          Deep learning model for lithium-ion battery
-          State of Health prediction using NASA datasets.
+          Developed a Retrieval-Augmented Generation chatbot using Python,
+          FAISS, Sentence Transformers and OpenAI GPT models
+          for contextual question answering and document retrieval.
         </p>
 
       </div>
 
-      <div class="card glass">
+      <div class="card project-card">
 
-        <h3>RAG AI Chatbot</h3>
+        <span>Machine Learning</span>
+
+        <h3>House Price Prediction</h3>
 
         <p>
-          Intelligent Retrieval-Augmented chatbot
-          for contextual question answering.
+          Built a Machine Learning web application using Python,
+          Flask and Scikit-Learn to predict house prices
+          using real-world property features and data analysis.
         </p>
 
       </div>
 
-      <div class="card glass">
+      <div class="card project-card">
 
-        <h3>Futuristic Video Edits</h3>
+        <span>Robotics & Automation</span>
+
+        <h3>Multi-Mode Autonomous Robot</h3>
 
         <p>
-          Creating neon cinematic edits and futuristic
-          reels with motion graphics and effects.
+          Designed and developed an autonomous robot
+          capable of obstacle avoidance, Bluetooth control
+          and voice-command operation using Arduino UNO.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+
+  <section>
+
+    <h2 class="section-title">Achievements</h2>
+
+    <div class="grid">
+
+      <div class="card">
+
+        <h3>Academic Excellence</h3>
+
+        <p>
+          Achieved Top 1% certification in
+          Introduction to Internet of Things by IIT Kharagpur.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>NVIDIA Certification</h3>
+
+        <p>
+          Completed NVIDIA certification
+          in Fundamentals of Deep Learning.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Robotics Presentation</h3>
+
+        <p>
+          Received appreciation certificate for presenting
+          the Multi-Mode Autonomous Robot at GENESIS-2025.
         </p>
 
       </div>
@@ -405,63 +547,77 @@
 
   <section id="contact" class="contact">
 
-    <h2 class="title">Contact</h2>
+    <h2 class="section-title">Contact</h2>
 
-    <p>Email : yourmail@gmail.com</p>
-    <p>LinkedIn : linkedin.com/in/yourname</p>
-    <p>GitHub : github.com/yourusername</p>
+    <p>Email : pavankumarballa04@gmail.com</p>
 
-    <div class="btns">
-      <a href="#" class="btn">Hire Me</a>
-    </div>
+    <p>GitHub : github.com/pa1pv04</p>
+
+    <p>LinkedIn : linkedin.com/in/BallaPavanKumar</p>
 
   </section>
 
   <footer>
-    © 2026 Pavan Kumar | Futuristic AI Portfolio
+    © 2026 Balla Pavan Kumar • AI Engineer & Video Editor
   </footer>
 
-  <!-- TYPING ANIMATION -->
+  <!-- TYPING EFFECT -->
 
   <script>
 
-    const text = [
+    const words = [
       "AI Engineer",
       "Machine Learning Developer",
       "Video Editor",
-      "Deep Learning Enthusiast",
-      "Creative Technologist"
+      "Creative Technologist",
+      "Deep Learning Enthusiast"
     ];
 
-    let count = 0;
-    let index = 0;
-    let currentText = "";
-    let letter = "";
+    let i = 0;
+    let j = 0;
+    let currentWord = "";
+    let isDeleting = false;
 
-    (function type(){
+    function type(){
 
-      if(count === text.length){
-        count = 0;
+      currentWord = words[i];
+
+      if(isDeleting){
+        j--;
+      } else {
+        j++;
       }
 
-      currentText = text[count];
-      letter = currentText.slice(0, ++index);
+      document.getElementById("typing").innerHTML =
+      currentWord.substring(0,j);
 
-      document.getElementById('typing').textContent = letter;
+      if(!isDeleting && j === currentWord.length){
 
-      if(letter.length === currentText.length){
+        isDeleting = true;
+        setTimeout(type,1200);
 
-        count++;
-        index = 0;
+      }
+      else if(isDeleting && j === 0){
 
-        setTimeout(type,1500);
+        isDeleting = false;
+        i++;
+
+        if(i === words.length){
+          i = 0;
+        }
+
+        setTimeout(type,200);
 
       }
       else{
-        setTimeout(type,100);
+
+        setTimeout(type,isDeleting ? 60 : 100);
+
       }
 
-    })();
+    }
+
+    type();
 
   </script>
 
