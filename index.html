@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pavan Kumar | Futuristic Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#050816;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* BACKGROUND GLOW */
+
+    body::before{
+      content:'';
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:#00f0ff;
+      filter:blur(180px);
+      opacity:0.2;
+      top:-150px;
+      left:-100px;
+      z-index:-1;
+    }
+
+    body::after{
+      content:'';
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:#ff00ff;
+      filter:blur(180px);
+      opacity:0.15;
+      bottom:-150px;
+      right:-100px;
+      z-index:-1;
+    }
+
+    nav{
+      width:100%;
+      position:fixed;
+      top:0;
+      padding:20px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      backdrop-filter:blur(12px);
+      background:rgba(0,0,0,0.2);
+      z-index:1000;
+    }
+
+    nav h1{
+      color:#00f0ff;
+      font-size:28px;
+      text-shadow:0 0 15px #00f0ff;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#00f0ff;
+      text-shadow:0 0 10px #00f0ff;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:120px 10%;
+    }
+
+    .hero h2{
+      font-size:70px;
+      margin-bottom:20px;
+    }
+
+    .hero h2 span{
+      color:#00f0ff;
+      text-shadow:
+      0 0 10px #00f0ff,
+      0 0 20px #00f0ff,
+      0 0 40px #00f0ff;
+    }
+
+    .typing{
+      font-size:28px;
+      color:#ff00ff;
+      margin-bottom:30px;
+      min-height:40px;
+      text-shadow:0 0 10px #ff00ff;
+    }
+
+    .hero p{
+      max-width:800px;
+      margin:auto;
+      line-height:1.8;
+      color:#d9d9d9;
+      font-size:18px;
+    }
+
+    .btns{
+      margin-top:40px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:15px 35px;
+      border-radius:40px;
+      border:none;
+      background:#00f0ff;
+      color:black;
+      font-weight:600;
+      text-decoration:none;
+      transition:0.4s;
+      box-shadow:0 0 20px #00f0ff;
+    }
+
+    .btn:hover{
+      transform:translateY(-5px);
+      box-shadow:
+      0 0 20px #00f0ff,
+      0 0 40px #00f0ff;
+    }
+
+    /* GLASS CARDS */
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      backdrop-filter:blur(12px);
+      border-radius:20px;
+      transition:0.4s;
+    }
+
+    .glass:hover{
+      border:1px solid #00f0ff;
+      box-shadow:0 0 25px #00f0ff40;
+      transform:translateY(-10px);
+    }
+
+    section{
+      padding:100px 10%;
+    }
+
+    .title{
+      text-align:center;
+      font-size:45px;
+      margin-bottom:60px;
+      color:#00f0ff;
+      text-shadow:0 0 15px #00f0ff;
+    }
+
+    /* SKILLS */
+
+    .skills{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      padding:30px;
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#00f0ff;
+    }
+
+    /* PROJECTS */
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    /* CONTACT */
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin:15px 0;
+      color:#d0d0d0;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      border-top:1px solid rgba(255,255,255,0.1);
+      color:#999;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      .hero h2{
+        font-size:45px;
+      }
+
+      .typing{
+        font-size:22px;
+      }
+
+      nav ul{
+        display:none;
+      }
+
+      section{
+        padding:80px 5%;
+      }
+
+      nav{
+        padding:20px 5%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <h1>PAVAN</h1>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero" id="about">
+
+    <div>
+
+      <h2>
+        Hi, I'm <span>Pavan Kumar</span>
+      </h2>
+
+      <div class="typing" id="typing"></div>
+
+      <p>
+        Electrical and Electronics Engineering student at NIT Andhra Pradesh
+        passionate about Artificial Intelligence, Deep Learning,
+        Robotics, NLP and Futuristic Video Editing.
+        I create intelligent systems and cinematic digital experiences
+        with creativity and technology.
+      </p>
+
+      <div class="btns">
+
+        <a href="#" class="btn">Resume</a>
+        <a href="#" class="btn">Contact</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <h2 class="title">Skills</h2>
+
+    <div class="skills">
+
+      <div class="card glass">
+        <h3>AI & ML</h3>
+
+        <p>
+          Machine Learning, Deep Learning,
+          Neural Networks, NLP and AI systems.
+        </p>
+      </div>
+
+      <div class="card glass">
+
+        <h3>Programming</h3>
+
+        <p>
+          Python, C++, HTML, CSS,
+          JavaScript and problem solving.
+        </p>
+
+      </div>
+
+      <div class="card glass">
+
+        <h3>Video Editing</h3>
+
+        <p>
+          Cinematic edits, reels,
+          transitions, VFX and storytelling.
+        </p>
+
+      </div>
+
+      <div class="card glass">
+
+        <h3>Tools</h3>
+
+        <p>
+          Premiere Pro, CapCut,
+          DaVinci Resolve, GitHub and VS Code.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <h2 class="title">Projects</h2>
+
+    <div class="projects">
+
+      <div class="card glass">
+
+        <h3>Battery SOH Prediction</h3>
+
+        <p>
+          Deep learning model for lithium-ion battery
+          State of Health prediction using NASA datasets.
+        </p>
+
+      </div>
+
+      <div class="card glass">
+
+        <h3>RAG AI Chatbot</h3>
+
+        <p>
+          Intelligent Retrieval-Augmented chatbot
+          for contextual question answering.
+        </p>
+
+      </div>
+
+      <div class="card glass">
+
+        <h3>Futuristic Video Edits</h3>
+
+        <p>
+          Creating neon cinematic edits and futuristic
+          reels with motion graphics and effects.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="contact">
+
+    <h2 class="title">Contact</h2>
+
+    <p>Email : yourmail@gmail.com</p>
+    <p>LinkedIn : linkedin.com/in/yourname</p>
+    <p>GitHub : github.com/yourusername</p>
+
+    <div class="btns">
+      <a href="#" class="btn">Hire Me</a>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Pavan Kumar | Futuristic AI Portfolio
+  </footer>
+
+  <!-- TYPING ANIMATION -->
+
+  <script>
+
+    const text = [
+      "AI Engineer",
+      "Machine Learning Developer",
+      "Video Editor",
+      "Deep Learning Enthusiast",
+      "Creative Technologist"
+    ];
+
+    let count = 0;
+    let index = 0;
+    let currentText = "";
+    let letter = "";
+
+    (function type(){
+
+      if(count === text.length){
+        count = 0;
+      }
+
+      currentText = text[count];
+      letter = currentText.slice(0, ++index);
+
+      document.getElementById('typing').textContent = letter;
+
+      if(letter.length === currentText.length){
+
+        count++;
+        index = 0;
+
+        setTimeout(type,1500);
+
+      }
+      else{
+        setTimeout(type,100);
+      }
+
+    })();
+
+  </script>
+
+</body>
+</html>
